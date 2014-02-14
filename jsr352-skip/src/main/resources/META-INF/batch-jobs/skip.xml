@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="skip" version="1.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee">
+	<step id="doChunk">
+		<chunk>
+			<reader ref="exampleItemReader" />
+			<processor ref="exampleItemProcessor" />
+			<writer ref="exampleItemWriter" />
+			<skippable-exception-classes>
+				<include class="java.lang.RuntimeException" />
+			</skippable-exception-classes>
+		</chunk>
+	</step>
+</job>
